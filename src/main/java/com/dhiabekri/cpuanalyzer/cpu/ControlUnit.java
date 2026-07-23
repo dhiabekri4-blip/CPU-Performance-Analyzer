@@ -4,13 +4,14 @@ public class ControlUnit {
 
     private final RegisterFile registerFile;
     private final ALU alu;
+    private final MemorySystem memorySystem;
 
 
-    public ControlUnit(RegisterFile registerFile, ALU alu) {
+    public ControlUnit(RegisterFile registerFile, ALU alu,MemorySystem memorySystem) {
 
         this.registerFile = registerFile;
         this.alu = alu;
-
+        this.memorySystem = memorySystem;
     }
 
 
@@ -95,7 +96,36 @@ public class ControlUnit {
 
                 break;
 
+            case LOAD:
 
+                int value = memorySystem.read(
+                        instruction.getSource1()
+                );
+
+                registerFile.writeRegister(
+                        instruction.getDestination(),
+                        value
+                );
+
+                break;
+            case STORE:
+
+                int storeValue = registerFile.readRegister(
+                        instruction.getSource1()
+                );
+
+                memorySystem.write(
+                        instruction.getDestination(),
+                        storeValue
+                );
+
+                break;
+            case MOV:
+                registerFile.writeRegister(
+                        instruction.getDestination(),
+                        instruction.getSource1()
+                );
+                break;
             default:
 
                 throw new IllegalArgumentException(
