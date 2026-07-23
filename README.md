@@ -1,37 +1,62 @@
-# CPU Performance Analyzer
+CPU Performance Analyzer (ICPA)
 
-A simplified CPU simulator built in Java to understand how computer architecture works internally.
+A Java-based CPU simulator that models the execution of a simple assembly-like instruction set and analyzes processor performance.
 
-## About the Project
+The project focuses on understanding fundamental computer architecture concepts:
 
-This project simulates the basic components of a CPU and their interaction during instruction execution.
+*CPU execution flow
+*Registers and ALU operations
+*Instruction decoding
+*Memory hierarchy
+*Cache behavior
+*Performance monitoring
+Architecture:
+Program
+   |
+   v
+Instruction Set
+   |
+   v
+CPU
+ ├── Control Unit
+ ├── ALU
+ └── Register File
+   |
+   v
+Memory System
+ ├── Cache
+ └── RAM
+   |
+   v
+Performance Monitor
+Implemented Components
 
-## Implemented Components
+✅ CPU Core
+✅ Register File
+✅ Arithmetic Logic Unit (ALU)
+✅ Control Unit
+✅ Instruction Set
+✅ Memory System (Cache + RAM)
+✅ Performance Monitoring
 
-- Register File
-- Memory (RAM simulation)
-- Arithmetic Logic Unit (ALU)
-- Control Unit
-- LOAD instruction
-- STORE instruction
-
-## Technologies
-
-- Java
-- Object-Oriented Programming
-- Computer Architecture Concepts
-
-## Current Progress
-
-The CPU can:
-- Store and retrieve values from registers
-- Read and write data in memory
-- Execute basic instructions
-- Transfer data between memory and registers
-
-## Future Improvements
-
-- More CPU instructions
-- Program Counter
-- Instruction Cycle (Fetch → Decode → Execute)
-- Performance analysis features
+Supported Instructions
+-ADD
+-SUB
+-MUL
+-DIV
+-AND
+-OR
+-MOV
+-LOAD
+-STORE
+Technologies:
+Java
+Maven
+Object-Oriented Programming
+Computer Architecture Concepts
+Future Improvements:
+CPU cycle simulation
+Cache replacement algorithms
+Pipeline simulation
+Branch prediction
+Performance reports
