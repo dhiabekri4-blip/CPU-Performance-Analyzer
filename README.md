@@ -1,16 +1,19 @@
-CPU Performance Analyzer (ICPA)
+# CPU Performance Analyzer (ICPA)
 
 A Java-based CPU simulator that models the execution of a simple assembly-like instruction set and analyzes processor performance.
 
 The project focuses on understanding fundamental computer architecture concepts:
 
-*CPU execution flow
-*Registers and ALU operations
-*Instruction decoding
-*Memory hierarchy
-*Cache behavior
-*Performance monitoring
-Architecture:
+* CPU execution flow
+* Registers and ALU operations
+* Instruction decoding
+* Memory hierarchy
+* Cache behavior
+* Performance monitoring
+
+## Architecture
+
+```
 Program
    |
    v
@@ -29,7 +32,9 @@ Memory System
    |
    v
 Performance Monitor
-Implemented Components
+```
+
+## Implemented Components
 
 ✅ CPU Core
 ✅ Register File
@@ -39,24 +44,34 @@ Implemented Components
 ✅ Memory System (Cache + RAM)
 ✅ Performance Monitoring
 
-Supported Instructions
--ADD
--SUB
--MUL
--DIV
--AND
--OR
--MOV
--LOAD
--STORE
-Technologies:
-Java
-Maven
-Object-Oriented Programming
-Computer Architecture Concepts
-Future Improvements:
-CPU cycle simulation
-Cache replacement algorithms
-Pipeline simulation
-Branch prediction
-Performance reports
+## Supported Instructions
+
+* ADD
+* SUB
+* MUL
+* DIV
+* AND
+* OR
+* MOV
+* LOAD
+* STORE
+
+## Technologies
+
+* Java
+* Maven
+* Object-Oriented Programming
+* Computer Architecture Concepts
+
+## Future Improvements
+
+* CPU cycle simulation
+* Cache replacement algorithms
+* Pipeline simulation
+* Branch prediction
+* Performance reports
+
+## Author
+
+Dhia Bekri
+GitHub: https://github.com/dhiabekri4-blip
